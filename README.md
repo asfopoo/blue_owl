@@ -1,7 +1,11 @@
-<img src = https://github.com/asfopoo/habe/blob/master/src/Assets/Images/Håbe.svg alt="BluOwl" width="200" height="100"/>  
-# Blue Owl AI<br/>
-----
-### Description 
+<img src = https://github.com/asfopoo/habe/blob/master/src/Assets/Images/Håbe.svg alt="Habe" width="200" height="100"/>  
+
+# Blue Owl AI
+---  
+
+#### The purpose of this application is a social media sharing website to connect people with ideas, to how-to videos they may be interested in.  This is the front end of the project written in react and making use of the material-ui library for a cleaner look
+
+#### Description
 - A responsive React application (using javascript or typescript) that displays a list of cards on a page as shown below.<br/>
 - There is a fixed-width pane on the right side of the window that remains attached to the right side when the user re-sizes. Inside the pane, there is a formatted display of these instructions. And if the browser width is small, the pane will hide automatically.<br/>
 - There is a fixed-height toolbar on the top of the window that has buttons.<br/>
@@ -10,16 +14,16 @@
 - Each card has a set pixel size, such as 300px by 250px, but can easily be changed if you wish. Upon instantiation, a card should be given a random number between 0 and 100 and display it in the center of the card.<br/>
 - Each card has a button in the top-right corner which can be used to delete the card.<br/>
 - If the user clicks the 'sort cards' button at the top of the page, please sort the cards in order of the number that is shown in the center of each card.<br/>
-----
-### Installation 
+---
+#### Description 
 - Ensure you have git command line tools installed on your computer<br/>
 - Open a terminal window<br/>
 - Enter $ git clone https://github.com/asfopoo/blue_owl.git<br/>
 - Once finished, enter $ cd blue_owl<br/>
 - Enter $ yarn install<br/>
-----
-### How to Run
+---
+#### How To Run 
 #### Once you have followed the installation instructions you are ready to run the application, you can do so by entering the command $ yarn start<br/>
-----
-### Troubleshooting
+---
+#### TroubleShooting
 - If you have any trouble please contact the author Edward Nardo at edward.nard@gmail.com
