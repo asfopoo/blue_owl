@@ -12,7 +12,7 @@
 - Each card has a button in the top-right corner which can be used to delete the card.<br/>
 - If the user clicks the 'sort cards' button at the top of the page, please sort the cards in order of the number that is shown in the center of each card.<br/>
 ---
-#### Description 
+#### Installation 
 - Ensure you have git command line tools installed on your computer<br/>
 - Open a terminal window<br/>
 - Enter $ git clone https://github.com/asfopoo/blue_owl.git<br/>
