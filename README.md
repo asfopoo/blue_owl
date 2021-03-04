@@ -13,7 +13,7 @@
 - If the user clicks the 'sort cards' button at the top of the page, please sort the cards in order of the number that is shown in the center of each card.<br/>
 ---
 #### Installation 
-- Ensure you have git command line tools installed on your computer<br/>
+- Ensure you have [git CLI](https://git-scm.com/downloads) installed on your computer<br/>
 - Open a terminal window<br/>
 - Enter $ git clone https://github.com/asfopoo/blue_owl.git<br/>
 - Once finished, enter $ cd blue_owl<br/>
