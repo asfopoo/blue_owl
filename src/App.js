@@ -1,5 +1,6 @@
 import React from "react";
-import home from "../src/screens/home/index"
+import home from "../src/screens/home"
+import resume from "../src/screens/resume"
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +13,7 @@ export default function App() {
       <div>
         <Switch>
           <Route exact path="/" component={home} />
+          <Route exact path="/resume" component={resume} />
         </Switch>
       </div>
     </Router>
