@@ -4,16 +4,16 @@ import List from "@material-ui/core/List";
 import { Card } from '../../components/card'
 import { instructions } from '../../components/instructions'
 import styles from './styles';
-import ListItem from "@material-ui/core/ListItem";
 
 class home extends Component {
   constructor(props) {
     super(props);
+    //set my state variables
     this.state = {
       showInstructionContainer: true,
-      cards: []
+      cards: [],
+      index: 0
     }
-    this.handleResize = this.handleResize.bind(this);
   }
 
   //set listener for window resizing
@@ -37,17 +37,22 @@ class home extends Component {
   addCards = () => {
     let cards = this.state.cards;
     cards.push({
-      number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))
+      key: this.state.index,
+      number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0))),
+
     })
     this.setState({ cards });
+    this.setState({index: this.state.index + 1})
   }
 
-  removeCards = () => {
-    console.log('remove cards');
+  sortCards = () => {
+    console.log('sorted');
   }
 
-  handleClick = () => {
-
+  removeCard = (index) => {
+    let cards = this.state.cards;
+    cards.splice(index, 1);
+    this.setState({ cards: cards });
   }
 
   navToResume = () => {
@@ -61,23 +66,24 @@ class home extends Component {
         {this.state.showInstructionContainer && (
           <div style={styles.instructionsContainer}>
             <h2> Instructions </h2>
-            {instructions.map(instruction => {
+            {instructions.map((instruction, index) => {
               return (
-                <h4> {instruction} </h4>
+                <h4 key={index}> {instruction} </h4>
               )
           })}
           </div>
         )}
         <div style={styles.header}>
           <Button onClick={this.addCards}>Add Card</Button>
-          <Button onClick={this.removeCards}>Sort Cards</Button>
+          <Button onClick={this.sortCards}>Sort Cards</Button>
         </div>
           <List style={styles.cardsList}>
-            {this.state.cards.map((card, index) => {
+            {this.state.cards.map(( card, index ) => {
               return (
                 <Card
-                  index={index}
-                  onClick={() => this.handleClick(index)}
+                  key={card.key}
+                  index={card.index}
+                  onClick={() => this.removeCard(index)}
                   number={card.number}
                 />)
             })}

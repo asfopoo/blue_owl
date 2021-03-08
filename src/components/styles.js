@@ -7,7 +7,8 @@ let styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     marginTop: '3%',
-    marginLeft: '3%'
+    marginLeft: '1.5%',
+    marginRight: '1.5%'
   },
   button: {
     position: 'absolute',

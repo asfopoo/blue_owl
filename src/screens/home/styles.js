@@ -18,6 +18,8 @@ let styles = {
   cardsList: {
     display: 'flex',
     flexWrap: 'wrap',
+    paddingLeft: '0.5%',
+    paddingRight: '0.5%',
   },
   instructionsContainer: {
     width: 275,
@@ -29,7 +31,8 @@ let styles = {
     position: 'sticky',
     zIndex: 1,
     backgroundColor: '#ffffff',
-    padding: '5%',
+    paddingLeft: '5%',
+    paddingRight: '5%',
     overflow: 'auto',
     flexDirection: 'column',
   },
