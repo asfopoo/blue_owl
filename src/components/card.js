@@ -6,8 +6,8 @@ import styles from './styles'
 
 export class Card extends React.Component {
 
+  //render a card using the props sent to the component
   render(){
-    //render a card using the props sent to the component
     return (
       <ListItem index={this.props.index} style={styles.card}>
         <p> {this.props.number} </p>

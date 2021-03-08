@@ -8,12 +8,12 @@ import styles from './styles';
 class home extends Component {
   constructor(props) {
     super(props);
-    //set my state variables
     this.state = {
       showInstructionContainer: true,
       cards: [],
-      index: 0
+      key: 0
     }
+    this.handleResize = this.handleResize.bind(this);
   }
 
   //set listener for window resizing
@@ -37,22 +37,23 @@ class home extends Component {
   addCards = () => {
     let cards = this.state.cards;
     cards.push({
-      key: this.state.index,
+      key: this.state.key,
       number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0))),
-
     })
     this.setState({ cards });
-    this.setState({index: this.state.index + 1})
+    this.setState({key: this.state.key + 1})
   }
 
   sortCards = () => {
-    console.log('sorted');
+    let cards = this.state.cards;
+    cards.sort((a, b) => (a.number > b.number) ? 1 : -1)
+    this.setState({ cards });
   }
 
   removeCard = (index) => {
     let cards = this.state.cards;
     cards.splice(index, 1);
-    this.setState({ cards: cards });
+    this.setState({ cards });
   }
 
   navToResume = () => {
@@ -82,7 +83,6 @@ class home extends Component {
               return (
                 <Card
                   key={card.key}
-                  index={card.index}
                   onClick={() => this.removeCard(index)}
                   number={card.number}
                 />)
