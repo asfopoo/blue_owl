@@ -1,6 +1,4 @@
 let styles = {
-  mainContainer: {
-  },
   header: {
     position: 'fixed',
     top: 0,
@@ -25,14 +23,13 @@ let styles = {
     position: 'fixed',
     marginTop: '3%',
     overflow: 'scroll',
-    borderWidth: 1,
-    borderStyle: 'solid',
   },
   cardsList: {
     display: 'flex',
     flexWrap: 'wrap',
     paddingLeft: '0.5%',
     paddingRight: '0.5%',
+    paddingBottom: '10%'
   },
   instructionsContainer: {
     width: 275,

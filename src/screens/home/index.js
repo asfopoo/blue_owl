@@ -19,8 +19,6 @@ class home extends Component {
         position: 'fixed',
         marginTop: '3%',
         overflow: 'scroll',
-        borderWidth: 1,
-        borderStyle: 'solid',
       }
     }
     this.handleResize = this.handleResize.bind(this);
@@ -48,8 +46,6 @@ class home extends Component {
       position: 'fixed',
       marginTop: '3%',
       overflow: 'scroll',
-      borderWidth: 1,
-      borderStyle: 'solid',
     }
     this.setState({ cardsContainer })
   }
@@ -77,14 +73,9 @@ class home extends Component {
     this.setState({ cards });
   }
 
-  navToResume = () => {
-    // pop a modal here
-    window.location = '/resume';
-  }
-
   render(){
     return(
-      <div style={styles.mainContainer}>
+      <div>
         <div style={styles.header}>
           <Button onClick={this.addCards}>Add Card</Button>
           <Button onClick={this.sortCards}>Sort Cards</Button>
@@ -102,7 +93,7 @@ class home extends Component {
           </List>
         </div>
         <div style={styles.footer}>
-          <Button onClick={this.navToResume}>Useful Links</Button>
+          <Button>Footer</Button>
         </div>
         {this.state.showInstructionContainer && (
           <div style={styles.instructionsContainer}>
