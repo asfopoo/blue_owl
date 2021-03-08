@@ -1,4 +1,4 @@
-<img src = https://github.com/asfopoo/habe/blob/master/src/Assets/Images/Håbe.svg alt="Habe" width="200" height="100"/>  
+<img src = https://github.com/asfopoo/blue_owl/blob/master/src/images/blueOwl.jpeg alt="Habe" width="200" height="100"/>  
 
 # Blue Owl AI
 ---  
