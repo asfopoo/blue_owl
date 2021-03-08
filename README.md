@@ -20,7 +20,7 @@
 - Enter $ yarn install<br/>
 ---
 #### How To Run 
-#### Once you have followed the installation instructions you are ready to run the application, you can do so by entering the command $ yarn start while still in the blue_owl directory<br/>
+- Once you have followed the installation instructions you are ready to run the application, you can do so by entering the command $ yarn start while still in the blue_owl directory<br/>
 ---
 #### TroubleShooting
 - If you have any trouble please contact the author Edward Nardo at edward.nard@gmail.com
