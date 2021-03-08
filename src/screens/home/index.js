@@ -11,7 +11,17 @@ class home extends Component {
     this.state = {
       showInstructionContainer: true,
       cards: [],
-      key: 0
+      key: 0,
+      cardsContainer: {
+        flex: 1,
+        width: window.innerWidth - 375,
+        height: '100%',
+        position: 'fixed',
+        marginTop: '3%',
+        overflow: 'scroll',
+        borderWidth: 1,
+        borderStyle: 'solid',
+      }
     }
     this.handleResize = this.handleResize.bind(this);
   }
@@ -31,6 +41,17 @@ class home extends Component {
     window.innerWidth <= 900 ?
       this.setState({showInstructionContainer: false}) :
       this.setState({showInstructionContainer: true})
+    let cardsContainer = {
+      flex: 1,
+      width: window.innerWidth - 375,
+      height: '100%',
+      position: 'fixed',
+      marginTop: '3%',
+      overflow: 'scroll',
+      borderWidth: 1,
+      borderStyle: 'solid',
+    }
+    this.setState({ cardsContainer })
   }
 
   //math.random returns a float between 0 and 1 so we add a little sugar to make it 0 - 100
@@ -63,21 +84,12 @@ class home extends Component {
 
   render(){
     return(
-      <div>
-        {this.state.showInstructionContainer && (
-          <div style={styles.instructionsContainer}>
-            <h2> Instructions </h2>
-            {instructions.map((instruction, index) => {
-              return (
-                <h4 key={index}> {instruction} </h4>
-              )
-          })}
-          </div>
-        )}
+      <div style={styles.mainContainer}>
         <div style={styles.header}>
           <Button onClick={this.addCards}>Add Card</Button>
           <Button onClick={this.sortCards}>Sort Cards</Button>
         </div>
+        <div style={this.state.showInstructionContainer ? this.state.cardsContainer : styles.cardsContainer}>
           <List style={styles.cardsList}>
             {this.state.cards.map(( card, index ) => {
               return (
@@ -88,9 +100,20 @@ class home extends Component {
                 />)
             })}
           </List>
+        </div>
         <div style={styles.footer}>
           <Button onClick={this.navToResume}>Useful Links</Button>
         </div>
+        {this.state.showInstructionContainer && (
+          <div style={styles.instructionsContainer}>
+            <h2> Instructions </h2>
+            {instructions.map((instruction, index) => {
+              return (
+                <h4 key={index}> {instruction} </h4>
+              )
+            })}
+          </div>
+        )}
       </div>
     )
   }

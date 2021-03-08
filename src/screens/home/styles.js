@@ -1,6 +1,9 @@
 let styles = {
+  mainContainer: {
+  },
   header: {
-    flex: 1,
+    position: 'fixed',
+    top: 0,
     flexDirection: 'row',
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
@@ -15,6 +18,16 @@ let styles = {
     width: '100%',
     backgroundColor: '#ffffff',
   },
+  cardsContainer: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    position: 'fixed',
+    marginTop: '3%',
+    overflow: 'scroll',
+    borderWidth: 1,
+    borderStyle: 'solid',
+  },
   cardsList: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -23,17 +36,17 @@ let styles = {
   },
   instructionsContainer: {
     width: 275,
-    float: 'right',
     textAlign: 'center',
     borderLeftWidth: 1,
     borderLeftStyle: 'solid',
-    height: '85%',
-    position: 'sticky',
-    zIndex: 1,
     backgroundColor: '#ffffff',
     paddingLeft: '5%',
     paddingRight: '5%',
-    overflow: 'auto',
+    paddingBottom: '5%',
+    overflow: 'scroll',
+    height: '100%',
+    position: 'fixed',
+    right:0,
     flexDirection: 'column',
   },
 };
