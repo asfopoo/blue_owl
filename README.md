@@ -2,7 +2,7 @@
 
 # Blue Owl AI
 ---  
-#### Description
+#### Directions
 - A responsive React application (using javascript or typescript) that displays a list of cards on a page as shown below.<br/>
 - There is a fixed-width pane on the right side of the window that remains attached to the right side when the user re-sizes. Inside the pane, there is a formatted display of these instructions. And if the browser width is small, the pane will hide automatically.<br/>
 - There is a fixed-height toolbar on the top of the window that has buttons.<br/>
@@ -20,7 +20,7 @@
 - Enter $ yarn install<br/>
 ---
 #### How To Run 
-#### Once you have followed the installation instructions you are ready to run the application, you can do so by entering the command $ yarn start while still in the blue_owl directory<br/>
+- Once you have followed the installation instructions you are ready to run the application, you can do so by entering the command $ yarn start while still in the blue_owl directory<br/>
 ---
 #### TroubleShooting
 - If you have any trouble please contact the author Edward Nardo at edward.nard@gmail.com
