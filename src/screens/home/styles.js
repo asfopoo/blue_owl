@@ -4,36 +4,35 @@ let styles = {
     flexDirection: 'row',
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
-    width: '100%'
+    width: '100%',
+    backgroundColor: '#ffffff',
   },
   footer: {
     position: 'fixed',
     bottom: 0,
     borderTopWidth: 1,
     borderTopStyle: 'solid',
-    width: '100%'
+    width: '100%',
+    backgroundColor: '#ffffff',
   },
-  cardsContainer: {
-    marginTop: '15%',
+  cardsList: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifySelf: 'center',
+    flexWrap: 'wrap',
   },
   instructionsContainer: {
-    width: 350,
-    position: 'fixed',
-    right: 0,
-    justifyContent: 'center',
-    alignContent: 'center',
+    width: 275,
+    float: 'right',
+    textAlign: 'center',
     borderLeftWidth: 1,
     borderLeftStyle: 'solid',
-    height: '100%',
+    height: '85%',
+    position: 'sticky',
     zIndex: 1,
-    backgroundColor: '#ffffff'
-  }
+    backgroundColor: '#ffffff',
+    padding: '5%',
+    overflow: 'auto',
+    flexDirection: 'column',
+  },
 };
 
 export default styles;
