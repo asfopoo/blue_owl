@@ -93,7 +93,7 @@ class home extends Component {
           </List>
         </div>
         <div style={styles.footer}>
-          <Button>Footer</Button>
+          <Button disabled>Footer</Button>
         </div>
         {this.state.showInstructionContainer && (
           <div style={styles.instructionsContainer}>
