@@ -12,14 +12,6 @@ class home extends Component {
       showInstructionContainer: true,
       cards: [],
       key: 0,
-      cardsContainer: {
-        flex: 1,
-        width: window.innerWidth - 375,
-        height: '100%',
-        position: 'fixed',
-        marginTop: '3%',
-        overflow: 'scroll',
-      }
     }
     this.handleResize = this.handleResize.bind(this);
   }
@@ -39,15 +31,6 @@ class home extends Component {
     window.innerWidth <= 900 ?
       this.setState({showInstructionContainer: false}) :
       this.setState({showInstructionContainer: true})
-    let cardsContainer = {
-      flex: 1,
-      width: window.innerWidth - 375,
-      height: '100%',
-      position: 'fixed',
-      marginTop: '3%',
-      overflow: 'scroll',
-    }
-    this.setState({ cardsContainer })
   }
 
   //math.random returns a float between 0 and 1 so we add a little sugar to make it 0 - 100
