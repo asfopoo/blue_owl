@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import List from "@material-ui/core/List";
 import { Card } from '../../components/card'
 import { instructions } from '../../components/instructions'
-import styles from './styles';
+import './styles.css';
 
 class home extends Component {
   constructor(props) {
@@ -88,9 +88,9 @@ class home extends Component {
 
   render(){
     return(
-      <div style={styles.mainContainer}>
-        <div style={styles.cardsContainer}>
-          <List style={styles.cardsList}>
+      <div class="mainContainer">
+        <div class="cardsContainer">
+          <List class="cardsList">
             {this.state.cards.map(( card, index ) => {
               return (
                 <Card
@@ -101,13 +101,20 @@ class home extends Component {
             })}
           </List>
         </div>
-        <div style={styles.instructionsContainer}>
+        <div class="instructionsContainer">
           <h2> Instructions </h2>
           {instructions.map((instruction, index) => {
             return (
               <h4 key={index}> {instruction} </h4>
             )
           })}
+        </div>
+        <div class="header">
+          <Button onClick={this.addCards}>Add Card</Button>
+          <Button onClick={this.sortCards}>Sort Cards</Button>
+        </div>
+        <div class="footer">
+          <Button disabled>Footer</Button>
         </div>
       </div>
     )
