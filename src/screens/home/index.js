@@ -10,7 +10,20 @@ class home extends Component {
     super(props);
     this.state = {
       showInstructionContainer: true,
-      cards: [],
+      cards: [{key: 1, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 2, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 3, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 4, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 5, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 6, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 7, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 12, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 13, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 14, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 15, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 16, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 17, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
+        {key: 18, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))}],
       key: 0,
       cardsContainer: {
         flex: 1,
@@ -75,12 +88,8 @@ class home extends Component {
 
   render(){
     return(
-      <div>
-        <div style={styles.header}>
-          <Button onClick={this.addCards}>Add Card</Button>
-          <Button onClick={this.sortCards}>Sort Cards</Button>
-        </div>
-        <div style={this.state.showInstructionContainer ? this.state.cardsContainer : styles.cardsContainer}>
+      <div style={styles.mainContainer}>
+        <div style={styles.cardsContainer}>
           <List style={styles.cardsList}>
             {this.state.cards.map(( card, index ) => {
               return (
@@ -92,19 +101,14 @@ class home extends Component {
             })}
           </List>
         </div>
-        <div style={styles.footer}>
-          <Button disabled>Footer</Button>
+        <div style={styles.instructionsContainer}>
+          <h2> Instructions </h2>
+          {instructions.map((instruction, index) => {
+            return (
+              <h4 key={index}> {instruction} </h4>
+            )
+          })}
         </div>
-        {this.state.showInstructionContainer && (
-          <div style={styles.instructionsContainer}>
-            <h2> Instructions </h2>
-            {instructions.map((instruction, index) => {
-              return (
-                <h4 key={index}> {instruction} </h4>
-              )
-            })}
-          </div>
-        )}
       </div>
     )
   }

@@ -16,11 +16,15 @@ let styles = {
     width: '100%',
     backgroundColor: '#ffffff',
   },
+  mainContainer: {
+    display: 'inline-flex',
+    overflow: 'hidden',
+    height: '100vh'
+  },
   cardsContainer: {
     flex: 1,
     width: '100%',
-    height: '100%',
-    position: 'fixed',
+    height: '100vh',
     marginTop: '3%',
     overflow: 'scroll',
   },
@@ -41,9 +45,7 @@ let styles = {
     paddingRight: '5%',
     paddingBottom: '5%',
     overflow: 'scroll',
-    height: '100%',
-    position: 'fixed',
-    right:0,
+    height: '100vh',
     flexDirection: 'column',
   },
 };
