@@ -58,9 +58,9 @@ class home extends Component {
 
   render(){
     return(
-      <div class="mainContainer">
-        <div class="cardsContainer">
-          <List class="cardsList">
+      <div className="mainContainer">
+        <div className="cardsContainer">
+          <List className="cardsList">
             {this.state.cards.map(( card, index ) => {
               return (
                 <Card
@@ -72,7 +72,7 @@ class home extends Component {
           </List>
         </div>
         {this.state.showInstructionContainer && (
-          <div class="instructionsContainer">
+          <div className="instructionsContainer">
             <h2> Instructions </h2>
             {instructions.map((instruction, index) => {
               return (
@@ -81,11 +81,11 @@ class home extends Component {
             })}
           </div>
         )}
-        <div class="header">
+        <div className="header">
           <Button onClick={this.addCards}>Add Card</Button>
           <Button onClick={this.sortCards}>Sort Cards</Button>
         </div>
-        <div class="footer">
+        <div className="footer">
           <Button disabled>Footer</Button>
         </div>
       </div>
