@@ -10,20 +10,7 @@ class home extends Component {
     super(props);
     this.state = {
       showInstructionContainer: true,
-      cards: [{key: 1, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 2, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 3, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 4, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 5, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 6, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 7, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 12, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 13, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 14, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 15, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 16, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 17, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))},
-        {key: 18, number: Math.floor(Math.random() * (Math.floor(100) - Math.ceil(0)))}],
+      cards: [],
       key: 0,
       cardsContainer: {
         flex: 1,
