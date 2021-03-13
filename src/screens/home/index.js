@@ -101,14 +101,16 @@ class home extends Component {
             })}
           </List>
         </div>
-        <div class="instructionsContainer">
-          <h2> Instructions </h2>
-          {instructions.map((instruction, index) => {
-            return (
-              <h4 key={index}> {instruction} </h4>
-            )
-          })}
-        </div>
+        {this.state.showInstructionContainer && (
+          <div class="instructionsContainer">
+            <h2> Instructions </h2>
+            {instructions.map((instruction, index) => {
+              return (
+                <h4 key={index}> {instruction} </h4>
+              )
+            })}
+          </div>
+        )}
         <div class="header">
           <Button onClick={this.addCards}>Add Card</Button>
           <Button onClick={this.sortCards}>Sort Cards</Button>
